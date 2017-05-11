@@ -35,3 +35,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Kiliman Web Service
+config/config-dev.json
+config/config-prod.json
+
+# Test application
+bower_components
