@@ -1,0 +1,27 @@
+{
+  "name": "kiliman-web-service",
+  "version": "0.1.0",
+  "description": "Kiliman web services APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinnackl/kiliman-web-service.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pinnackl/kiliman-web-service/issues"
+  },
+  "homepage": "https://github.com/pinnackl/kiliman-web-service#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "color": "^1.0.3",
+    "colors": "^1.1.2",
+    "express": "^4.15.2",
+    "path": "^0.12.7",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

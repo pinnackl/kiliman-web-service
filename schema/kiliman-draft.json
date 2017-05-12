@@ -1,0 +1,46 @@
+{
+  "api": {
+    "name": "Kiliman",
+    "sort_order": 0,
+    "backend_protocol": "http",
+    "frontend_host": "localhost",
+    "backend_host": "localhost",
+    "servers": [
+      {
+        "host": "localhost",
+        "port": 8181
+      }
+    ],
+    "url_matches": [
+      {
+        "frontend_prefix": "/nimda",
+        "backend_prefix": "/"
+      }
+    ],
+    "balance_algorithm": "least_conn",
+    "sub_settings": [
+      {
+        "http_method": "any",
+        "regex": "/random_user",
+        "settings": {
+          "require_https": "optional",
+          "required_roles": [
+            "random_user"
+          ],
+          "required_roles_override": true,
+          "rate_limit_mode": "custom",
+          "rate_limits": [
+            {
+              "duration": 120000,
+              "limit": 10,
+              "accuracy": 5000,
+              "limit_by": "apiKey",
+              "distributed": true,
+              "response_headers": true
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
