@@ -44,7 +44,7 @@ module.exports = (app) => {
      function ajax (param) {
         var url         = typeof param.url !== 'undefined' ? param.url  : "/";
         var type        = typeof param.type !== 'undefined' ? param.type  : "GET";
-        var data        = typeof param.data !== 'undefined' ? param.data  : {};
+        var data        = typeof param.data !== 'undefined' ? param.data  : null;
         var headers     = typeof param.headers !== 'undefined' ? param.headers  : [{'header': 'X-Requested-With', 'value': 'XMLHttpRequest'}];
         var user        = typeof param.user !== 'undefined' ? param.user  : null;
         var password    = typeof param.password !== 'undefined' ? param.password  : null;
