@@ -10,13 +10,24 @@ module.exports = (app) => {
         app.actions.gateway.apis
     );
 
-    router.post('/api/create', () => {}
+    router.get('/api/show/:id',
+        app.middlewares.bodyParser.json(),
+        app.actions.gateway.apiShow
     );
 
-    router.get('/api/show/{id}', () => {}
+    router.post('/api/create',
+        app.middlewares.bodyParser.json(),
+        app.actions.gateway.apiCreate
     );
 
-    router.put('/api/update/{id}', () => {}
+    router.put('/api/update/:id',
+        app.middlewares.bodyParser.json(),
+        app.actions.gateway.apiUpdate
+    );
+
+    router.delete('/api/delete/:id',
+        app.middlewares.bodyParser.json(),
+        app.actions.gateway.apiDelete
     );
 
     //////////////
